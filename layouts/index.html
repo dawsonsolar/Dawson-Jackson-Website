@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="container">
+  <div class="author-profile-section">
+    <div class="profile-photo-container">
+      <img
+        src="{{ .Site.Params.Author.image | absURL }}"
+        alt="{{ .Site.Params.Author.name }}"
+        class="profile-photo"
+      />
+    </div>
+    <p class="profile-tagline">{{ .Site.Params.tagline | markdownify }}</p>
+    <div class="social-links">
+      {{ range $name, $url := .Site.Params.Social }}
+        {{ if eq $name "github" }}
+        <a href="{{ $url }}" target="_blank" rel="noopener" class="social-link" title="GitHub">
+          <i class="fab fa-github social-icon"></i>
+        </a>
+        {{ else if eq $name "twitter" }}
+        <a href="{{ $url }}" target="_blank" rel="noopener" class="social-link" title="X (formerly Twitter)">
+          <span class="social-icon x-icon">𝕏</span>
+        </a>
+        {{ else if eq $name "linkedin" }}
+        <a href="{{ $url }}" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin social-icon"></i>
+        </a>
+        {{ else if eq $name "email" }}
+        <a href="mailto:{{ $url }}" class="social-link" title="Email">
+          <i class="fas fa-envelope social-icon"></i>
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Tag filter — built from project tags -->
+  {{ $projects := where .Site.RegularPages "Section" "eq" "projects" }}
+  {{ $allTags := slice }}
+  {{ range $projects }}
+    {{ range .Params.tags }}
+      {{ $allTags = $allTags | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $uniqueTags := $allTags | uniq }}
+
+  {{ if $uniqueTags }}
+  <div class="filter-section">
+    <div class="filter-tags">
+      <div class="tag active" data-tag="all">All</div>
+      {{ range $uniqueTags }}
+      <div class="tag" data-tag="{{ . | urlize }}">{{ . }}</div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Projects list -->
+  <div class="posts-list" id="posts-container">
+    {{ range $projects }}
+    <article class="post-item" data-tags="{{ range .Params.tags }}{{ . | urlize }} {{ end }}">
+      <div class="post-content">
+        <div class="post-header-inline">
+          <h2 class="post-title-vaporwave">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+        </div>
+        <div class="post-date-with-badges">
+          <span class="post-date">{{ .Date.Format "2006.01.02" }}</span>
+        </div>
+        {{ if .Params.description }}
+        <p class="post-excerpt-vaporwave">{{ .Params.description }}</p>
+        {{ end }}
+        {{ if .Params.tags }}
+        <div class="post-tags-vaporwave">
+          {{ range .Params.tags }}
+          <span class="post-tag-vaporwave">{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+        <a href="{{ .Permalink }}" class="continue-reading-vaporwave">View Project →</a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+// Tag filtering for projects
+document.querySelectorAll('.filter-tags .tag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tags .tag').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const selected = btn.dataset.tag;
+    document.querySelectorAll('#posts-container .post-item').forEach(card => {
+      if (selected === 'all') {
+        card.style.display = '';
+      } else {
+        const tags = (card.dataset.tags || '').trim().split(/\s+/);
+        card.style.display = tags.includes(selected) ? '' : 'none';
+      }
+    });
+  });
+});
+</script>
+{{ end }}

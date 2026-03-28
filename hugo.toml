@@ -1,0 +1,72 @@
+baseURL = "https://dawsonsolar.github.io/Dawson-Jackson-Website/"
+languageCode = "en-us"
+title = "Dawson Jackson's Portfolio"
+theme = "loficode"
+
+# Enable emoji support
+enableEmoji = true
+
+# Output formats required for loficode's SPA navigation
+[outputs]
+  home = ["HTML", "JSON", "pages"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+# Custom output formats
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+  [outputFormats.pages]
+    mediaType = "application/json"
+    baseName = "pages"
+    isPlainText = true
+
+# Pagination
+[pagination]
+  pagerSize = 6
+  path = "page"
+
+[params]
+  description = "Dawson Jackson's portfolio — programmer & developer"
+  tagline = "Programmer & Developer"
+
+  [params.author]
+    name = "Dawson Jackson"
+    image = "images/profile.png"
+
+  [params.social]
+    github = "https://github.com/dawsonsolar"
+    linkedin = "https://www.linkedin.com/in/dawson-jackson"
+    email = "dawsonbusiness722@gmail.com"
+
+# Main navigation menu
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 3
+
+# Syntax highlighting
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+    lineNumbersInTable = false
+    tabWidth = 2
+    noClasses = false
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
