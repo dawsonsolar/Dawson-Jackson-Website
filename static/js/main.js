@@ -1,3 +1,11 @@
+// Detect base path from Hugo-injected meta tag
+const SITE_BASE = (() => {
+  const meta = document.querySelector('meta[name="base-url"]');
+  if (!meta) return '/';
+  // Extract just the pathname (e.g. '/Dawson-Jackson-Website/')
+  try { return new URL(meta.content).pathname; } catch(e) { return '/'; }
+})();
+
 // LofiCode Main JavaScript
 
 (function () {
@@ -521,7 +529,7 @@
     } else {
       // If we're on other pages, try to fetch the homepage to get post data
       try {
-        const response = await fetch("/");
+        const response = await fetch(SITE_BASE);
         const html = await response.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
@@ -914,7 +922,7 @@
 
     async loadPostsData() {
       try {
-        const response = await fetch("/index.json");
+        const response = await fetch(SITE_BASE + "index.json");
         if (response.ok) {
           this.postsData = await response.json();
           console.log(
@@ -932,7 +940,7 @@
 
     async loadPagesData() {
       try {
-        const response = await fetch("/pages.json");
+        const response = await fetch(SITE_BASE + "pages.json");
         if (response.ok) {
           this.pagesData = await response.json();
           console.log(
@@ -1059,7 +1067,7 @@
 
       // Navigate to home when clicked
       backButton.addEventListener('click', () => {
-        window.location.href = '/Dawson-Jackson-Website/';
+        window.location.href = SITE_BASE;
       });
 
       document.body.appendChild(backButton);
@@ -1737,7 +1745,7 @@
 
       // Update URL if needed
       if (updateHistory) {
-        history.pushState({ type: "home" }, "LofiCode", "/");
+        history.pushState({ type: "home" }, document.title, SITE_BASE);
       }
     }
   }
@@ -1773,7 +1781,7 @@
 
       try {
         // Fetch posts data from index.json
-        const response = await fetch('/index.json');
+        const response = await fetch(SITE_BASE + 'index.json');
         const postsData = await response.json();
 
         // Get the next batch of posts
