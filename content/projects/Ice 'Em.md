@@ -23,8 +23,8 @@ I designed the player controller from scratch: movement, turn sequencing, input 
 
 ## Post-Jam Development
 
-Continuing solo after a jam is always interesting — the codebase that was "good enough for 48 hours" has to become something you can actually build on. I've been expanding the level design with proper tilemap-based layouts, refining how enemies move and react, and adding mechanics that didn't make the jam cut: items, and a thin ice system that makes the battlefield itself a hazard.
+Continuing solo after a jam is always interesting. the codebase that was "good enough for 72 hours" has to become something you can actually build on. I've been expanding the level design with proper tilemap-based layouts, refining how enemies move and react, and adding mechanics that didn't make the jam cut: items, and a thin ice system that makes the battlefield itself a hazard. It has mainly been on the back burner until recent due to coursework.
 
 ## Current Status
 
-Actively in development. Planned hiatus May 2026 for coursework. This is a personal learning project and not intended for public release.
+Actively in development. Planned hiatus May 2026 for summer break and work. This is a personal learning project and not intended for public release.
