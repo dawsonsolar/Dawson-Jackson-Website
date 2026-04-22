@@ -25,4 +25,4 @@ The project ran on a full Agile/Scrum pipeline — sprint planning, daily standu
 
 ## Release
 
-Available **free on Steam** — releasing May 2026.
+Available now for **free on Steam**
