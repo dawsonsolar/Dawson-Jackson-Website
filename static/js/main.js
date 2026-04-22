@@ -152,7 +152,7 @@ const SITE_BASE = (() => {
     }
 
     try {
-      const audio = new Audio(`/audio/${soundType}.mp3`);
+      const audio = new Audio(SITE_BASE + `audio/${soundType}.mp3`);
       audio.loop = true;
       audio.volume = volumeSlider ? volumeSlider.value : 0.3;
 
@@ -819,7 +819,7 @@ const SITE_BASE = (() => {
 
     showLoadingState(soundType);
 
-    const audio = new Audio(`/audio/${soundType}.mp3`);
+    const audio = new Audio(SITE_BASE + `audio/${soundType}.mp3`);
     audio.loop = true;
     audio.volume = volumeSlider ? volumeSlider.value : 0.3;
 
@@ -1120,7 +1120,7 @@ const SITE_BASE = (() => {
 
       // Update URL if needed
       if (updateHistory) {
-        const newUrl = `/${slug}/`;
+        const newUrl = SITE_BASE + slug + '/';
         history.pushState({ type: "page", slug }, page.title, newUrl);
       }
 

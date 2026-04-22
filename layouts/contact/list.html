@@ -15,6 +15,25 @@
         <div class="post-body">
           {{ .Content }}
         </div>
+
+        <!-- Social quick-links -->
+        <div class="contact-social-row" style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;">
+          {{ with .Site.Params.Social.github }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="continue-reading-vaporwave" style="display:inline-flex;align-items:center;gap:0.4rem;">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          {{ end }}
+          {{ with .Site.Params.Social.linkedin }}
+          <a href="{{ . }}" target="_blank" rel="noopener" class="continue-reading-vaporwave" style="display:inline-flex;align-items:center;gap:0.4rem;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          {{ end }}
+          {{ with .Site.Params.Social.email }}
+          <a href="mailto:{{ . }}" class="continue-reading-vaporwave" style="display:inline-flex;align-items:center;gap:0.4rem;">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          {{ end }}
+        </div>
       </article>
     </div>
   </div>

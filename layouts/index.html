@@ -8,16 +8,13 @@
         class="profile-photo"
       />
     </div>
+    <h1 class="profile-name" style="font-size:1.6rem; margin:0.5rem 0 0.25rem; color:var(--text-primary);">{{ .Site.Params.Author.name }}</h1>
     <p class="profile-tagline">{{ .Site.Params.tagline | markdownify }}</p>
     <div class="social-links">
       {{ range $name, $url := .Site.Params.Social }}
         {{ if eq $name "github" }}
         <a href="{{ $url }}" target="_blank" rel="noopener" class="social-link" title="GitHub">
           <i class="fab fa-github social-icon"></i>
-        </a>
-        {{ else if eq $name "twitter" }}
-        <a href="{{ $url }}" target="_blank" rel="noopener" class="social-link" title="X (formerly Twitter)">
-          <span class="social-icon x-icon">𝕏</span>
         </a>
         {{ else if eq $name "linkedin" }}
         <a href="{{ $url }}" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
@@ -30,16 +27,19 @@
         {{ end }}
       {{ end }}
     </div>
+
+    <!-- Intro text from _index.md -->
+    {{ if .Content }}
+    <div class="profile-intro" style="max-width:560px; margin:1.25rem auto 0; text-align:center; line-height:1.7; color:var(--text-secondary); font-size:0.95rem;">
+      {{ .Content }}
+    </div>
+    {{ end }}
   </div>
 
-  <!-- Tag filter — built from project tags -->
+  <!-- Tag filter -->
   {{ $projects := where .Site.RegularPages "Section" "eq" "projects" }}
   {{ $allTags := slice }}
-  {{ range $projects }}
-    {{ range .Params.tags }}
-      {{ $allTags = $allTags | append . }}
-    {{ end }}
-  {{ end }}
+  {{ range $projects }}{{ range .Params.tags }}{{ $allTags = $allTags | append . }}{{ end }}{{ end }}
   {{ $uniqueTags := $allTags | uniq }}
 
   {{ if $uniqueTags }}
@@ -53,18 +53,22 @@
   </div>
   {{ end }}
 
-  <!-- Projects list -->
+  <!-- Projects grid -->
   <div class="posts-list" id="posts-container">
     {{ range $projects }}
-    <article class="post-item" data-tags="{{ range .Params.tags }}{{ . | urlize }} {{ end }}">
+    <article class="post-item project-item" data-tags="{{ range .Params.tags }}{{ . | urlize }} {{ end }}">
+      {{ if .Params.image }}
+      <a href="{{ .Permalink }}" class="project-thumb-link">
+        <div class="project-thumb">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" />
+        </div>
+      </a>
+      {{ end }}
       <div class="post-content">
         <div class="post-header-inline">
           <h2 class="post-title-vaporwave">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h2>
-        </div>
-        <div class="post-date-with-badges">
-          <span class="post-date">{{ .Date.Format "2006.01.02" }}</span>
         </div>
         {{ if .Params.description }}
         <p class="post-excerpt-vaporwave">{{ .Params.description }}</p>
@@ -83,13 +87,47 @@
   </div>
 </div>
 
+<style>
+.profile-intro a {
+  color: var(--accent-primary, #ff6b9d);
+  text-decoration: none;
+}
+.profile-intro a:hover {
+  text-decoration: underline;
+}
+.project-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+.project-thumb-link {
+  flex-shrink: 0;
+}
+.project-thumb {
+  width: 200px;
+  height: 115px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 600px) {
+  .project-item { flex-direction: column; }
+  .project-thumb { width: 100%; height: 180px; }
+}
+</style>
+
 <script>
-// Tag filtering for projects
 document.querySelectorAll('.filter-tags .tag').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-tags .tag').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
     const selected = btn.dataset.tag;
     document.querySelectorAll('#posts-container .post-item').forEach(card => {
       if (selected === 'all') {

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#0d2a3c"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00c8ff"/>
+      <stop offset="100%" style="stop-color:#a0e8ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  <!-- Ice/snow ground -->
+  <rect x="0" y="340" width="800" height="110" fill="#0a2a40" opacity="0.8"/>
+  <rect x="0" y="338" width="800" height="6" fill="#00c8ff" opacity="0.4"/>
+  <!-- Ice cracks -->
+  <g stroke="#00c8ff" stroke-width="1" opacity="0.2">
+    <polyline points="100,338 120,360 140,350 160,380"/>
+    <polyline points="300,338 280,365 310,375"/>
+    <polyline points="500,338 520,355 490,370 510,390"/>
+    <polyline points="650,338 670,360 640,375"/>
+  </g>
+  <!-- Snowflakes -->
+  <g fill="#a0e8ff" opacity="0.5">
+    <circle cx="80" cy="80" r="2"/>
+    <circle cx="200" cy="50" r="1.5"/>
+    <circle cx="350" cy="120" r="2"/>
+    <circle cx="550" cy="60" r="1.5"/>
+    <circle cx="680" cy="100" r="2"/>
+    <circle cx="150" cy="200" r="1"/>
+    <circle cx="450" cy="180" r="1.5"/>
+    <circle cx="720" cy="220" r="1"/>
+  </g>
+  <!-- Player character (simple) -->
+  <g transform="translate(360,280)">
+    <rect x="-12" y="-35" width="24" height="30" rx="4" fill="#00c8ff" opacity="0.9"/>
+    <circle cx="0" cy="-45" r="12" fill="#00c8ff" opacity="0.9"/>
+    <!-- Eyes -->
+    <circle cx="-4" cy="-47" r="2" fill="#0a1628"/>
+    <circle cx="4" cy="-47" r="2" fill="#0a1628"/>
+    <!-- Snowball -->
+    <circle cx="28" cy="-20" r="10" fill="#a0e8ff" opacity="0.8"/>
+  </g>
+  <!-- Enemy -->
+  <g transform="translate(500,290)" opacity="0.7">
+    <rect x="-10" y="-28" width="20" height="25" rx="3" fill="#ff4444"/>
+    <circle cx="0" cy="-36" r="10" fill="#ff4444"/>
+    <circle cx="-3" cy="-38" r="2" fill="#0a1628"/>
+    <circle cx="3" cy="-38" r="2" fill="#0a1628"/>
+  </g>
+  <!-- Glow effect -->
+  <circle cx="400" cy="200" r="180" fill="none" stroke="#00c8ff" stroke-width="60" opacity="0.03"/>
+  <!-- Title -->
+  <text x="400" y="390" text-anchor="middle" font-family="monospace" font-size="26" font-weight="bold" fill="url(#ice)" letter-spacing="4">ICE 'EM</text>
+  <text x="400" y="415" text-anchor="middle" font-family="monospace" font-size="12" fill="#a0e8ff" opacity="0.7" letter-spacing="2">UNITY · C# · WINTER GAME JAM 2025</text>
+</svg>

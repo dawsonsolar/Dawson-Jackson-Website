@@ -1,20 +1,25 @@
 +++
 title = "Chyma and the Toll of Time"
 date = 2025-12-21
-description = "A senior team project made to prepare and develop experience for the game development industry."
-tags = ["C#", "Unity", "Agile and Scrum", "Game Dev"]
+description = "A senior capstone game built with The Game Studio at Champlain College. Available free on Steam."
+tags = ["Unity", "C#", "Agile", "Game Dev"]
+image = "/Dawson-Jackson-Website/images/projects/chyma.svg"
 +++
 
-**Chyma** is a team project made with Champlain College and The Game Studio.
+**Chyma and the Toll of Time** is a game developed in collaboration with Champlain College and The Game Studio. I joined the project mid-development as a generalist programmer.
 
-## What I explored
+## My Role
 
-- How it feels to be onboarded mid-project, and how to adjust accordingly.
-- Community driven bugfixing and feedback via public testing.
-- Heavily driven and lead using Agile and Scrum
-- Generalist Programming helping in all aspects possible where needed while getting used to the project as a whole.
+I was brought on mid-project and had to onboard quickly into an existing codebase. My contributions spanned multiple systems:
 
-## Generalist Programmer?
-I wanted to work on being a game programmer that can work on anything decently, rather than being good at one specific thing. It also was vital for helping with onboarding, as since I was added midway through the development process. It made the most sense in order to get used to the codebase of the game and develop more complex mechanics and systems later.
+- **Enemy behavior** — implemented and tuned AI state machines for enemy movement and aggression patterns
+- **UI systems** — built and iterated on in-game HUD elements including health display and status indicators  
+- **Bug triage** — led community-driven bug fixing rounds using public playtesting sessions and player feedback
+- **Agile workflow** — participated in sprint planning, daily standups, and retrospectives using Scrum methodology throughout the development cycle
+- **Generalist support** — contributed to physics interactions, scene transitions, and gameplay balance adjustments as needs arose
 
-This project is currently on Steam for free! Planned to release May 2026.
+## What I Learned
+
+Joining a live project mid-cycle taught me how to read unfamiliar codebases quickly, ask the right questions, and contribute meaningfully without breaking existing systems. Working under Agile/Scrum gave me a strong foundation in professional game development workflow.
+
+**Available free on Steam — releasing May 2026.**
