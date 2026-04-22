@@ -3,23 +3,26 @@ title = "Chyma and the Toll of Time"
 date = 2025-12-21
 description = "A senior capstone game built with The Game Studio at Champlain College. Available free on Steam."
 tags = ["Unity", "C#", "Agile", "Game Dev"]
-image = "/Dawson-Jackson-Website/images/projects/chyma.png"
+image = "/Dawson-Jackson-Website/images/projects/chyma.svg"
 +++
 
-**Chyma and the Toll of Time** is a game developed in collaboration with Champlain College and The Game Studio. I joined the project mid-development as a generalist programmer.
+**Chyma and the Toll of Time** is a game developed through Champlain College's senior capstone program in partnership with The Game Studio. I joined as a generalist programmer mid-development, integrating into an active production pipeline and contributing across multiple systems.
 
-## My Role
+## Role
 
-I was brought on mid-project and had to onboard quickly into an existing codebase. My contributions spanned multiple systems:
+**Generalist Programmer** — onboarded mid-project into an existing Unity/C# codebase.
 
-- **Enemy behavior** — implemented and tuned AI state machines for enemy movement and aggression patterns
-- **UI systems** — built and iterated on in-game HUD elements including health display and status indicators  
-- **Bug triage** — led community-driven bug fixing rounds using public playtesting sessions and player feedback
-- **Agile workflow** — participated in sprint planning, daily standups, and retrospectives using Scrum methodology throughout the development cycle
-- **Generalist support** — contributed to physics interactions, scene transitions, and gameplay balance adjustments as needs arose
+## What I Built
 
-## What I Learned
+- **Enemy behavior** — implemented and tuned AI state machines controlling enemy movement, patrol logic, and aggression triggers
+- **HUD & UI systems** — built in-game interface elements including health bars, status indicators, and screen-space overlays
+- **Community bug triage** — ran public playtesting rounds and systematically resolved player-reported issues through iterative builds
+- **Gameplay polish** — contributed fixes and tuning across physics interactions, scene transitions, and balance adjustments throughout the sprint cycle
 
-Joining a live project mid-cycle taught me how to read unfamiliar codebases quickly, ask the right questions, and contribute meaningfully without breaking existing systems. Working under Agile/Scrum gave me a strong foundation in professional game development workflow.
+## Production Workflow
 
-**Available free on Steam — releasing May 2026.**
+The project ran on a full Agile/Scrum pipeline — sprint planning, daily standups, backlog grooming, and retrospectives. Joining mid-production taught me how to read unfamiliar codebases quickly, communicate intent clearly in code reviews, and contribute without destabilizing existing systems.
+
+## Release
+
+Available **free on Steam** — releasing May 2026.
