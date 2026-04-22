@@ -3,7 +3,7 @@ title = "Chyma and the Toll of Time"
 date = 2025-12-21
 description = "A senior capstone game built with The Game Studio at Champlain College. Available free on Steam."
 tags = ["Unity", "C#", "Agile", "Game Dev"]
-image = "/Dawson-Jackson-Website/images/projects/chyma.svg"
+image = "/Dawson-Jackson-Website/images/projects/chyma.png"
 +++
 
 **Chyma and the Toll of Time** is a game developed through Champlain College's senior capstone program in partnership with The Game Studio. I joined as a generalist programmer mid-development, integrating into an active production pipeline and contributing across multiple systems.

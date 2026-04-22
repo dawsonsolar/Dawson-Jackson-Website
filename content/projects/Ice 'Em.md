@@ -3,7 +3,7 @@ title = "Ice 'Em"
 date = 2026-01-15
 description = "A Worms-inspired turn-based game built for Winter Game Jam 2025. Continuing in solo development."
 tags = ["Unity", "C#", "Game Dev"]
-image = "/Dawson-Jackson-Website/images/projects/iceem.svg"
+image = "/Dawson-Jackson-Website/images/projects/Iceem.png"
 +++
 
 **Ice 'Em** is a turn-based game inspired by *Worms*, built over a single weekend for **Winter Game Jam 2025** with a team of three. I served as lead programmer and owned the majority of the codebase from day one.
