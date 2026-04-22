@@ -2,6 +2,7 @@ baseURL = "https://dawsonsolar.github.io/Dawson-Jackson-Website/"
 languageCode = "en-us"
 title = "Dawson Jackson's Portfolio"
 theme = "loficode"
+canonifyURLs = true
 
 # Enable emoji support
 enableEmoji = true
@@ -44,17 +45,17 @@ enableEmoji = true
 # Main navigation menu
 [[menu.main]]
   name = "Projects"
-  url = "/projects/"
+  url = "/Dawson-Jackson-Website/projects/"
   weight = 1
 
 [[menu.main]]
   name = "About"
-  url = "/about/"
+  url = "/Dawson-Jackson-Website/about/"
   weight = 2
 
 [[menu.main]]
   name = "Contact"
-  url = "/contact/"
+  url = "/Dawson-Jackson-Website/contact/"
   weight = 3
 
 # Syntax highlighting
