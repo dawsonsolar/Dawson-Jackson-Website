@@ -7,7 +7,7 @@ tags = ["Unity", "C#", "Agile", "Game Dev"]
 image = "/Dawson-Jackson-Website/images/projects/chyma.png"
 +++
 
-*Chyma and the Toll of Time* is a game developed through Champlain College's senior capstone program in partnership with The Game Studio — a student-run development studio that ships real titles. I was added to the team mid-production as a generalist programmer, which meant getting up to speed on an unfamiliar codebase fast and finding ways to contribute without slowing anyone else down.
+*Chyma and the Toll of Time* is a game developed through Champlain College's senior capstone program with The Game Studio — a student-run development studio that ships real titles. I was added to the team Sand Storm Studios mid-production as a generalist programmer, which meant getting up to speed on an unfamiliar codebase fast and finding ways to contribute without slowing anyone else down.
 
 ![Chyma and the Toll of Time gameplay](/Dawson-Jackson-Website/images/projects/chyma-screen1.png)
 
@@ -15,7 +15,7 @@ image = "/Dawson-Jackson-Website/images/projects/chyma.png"
 
 Being brought on mid-project was a deliberate challenge I wanted to experience. In a professional setting, you rarely get to start from scratch — you inherit systems, conventions, and tech debt. On *Chyma*, I had to learn what existed before I could add anything new.
 
-My contributions ended up spanning several areas. I implemented and tuned enemy AI, building out the state machines that governed how enemies patrolled, reacted to the player, and escalated aggression. I also worked on HUD and UI elements — health indicators, status displays, and screen-space overlays that fed real-time information to the player. Outside of feature work, I ran community-facing playtesting sessions and led the bug triage that followed, working through player-reported issues systematically across iterative builds.
+My contributions ended up spanning several areas. I implemented and tuned enemy AI, building out the state machines that governed how enemies patrolled, reacted to the player, and escalated aggression. I also worked on general obstacles for the game, such as the ball and horizontal platform and making sure the player interacts with them well. Outside of feature work, I ran community-facing playtesting sessions and through that playtesting, worked through player-reported issues with bug report spreadsheets and forms systematically across iterative builds. Around 200 bugs were found and fixed by the time of release.
 
 ![Chyma and the Toll of Time screenshot](/Dawson-Jackson-Website/images/projects/chyma-screen2.png)
 

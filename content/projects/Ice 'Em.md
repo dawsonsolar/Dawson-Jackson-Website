@@ -7,7 +7,7 @@ tags = ["Unity", "C#", "Game Dev"]
 image = "/Dawson-Jackson-Website/images/projects/Iceem.png"
 +++
 
-*Ice 'Em* started as a 48-hour challenge. Three people, one weekend, and a concept inspired by *Worms* — you take turns, throw things, and try to freeze your enemies before they freeze you. I came in as lead programmer and built most of the codebase from scratch over that single weekend.
+*Ice 'Em* started as a week-long challenge, but due to the holidays it was more like three days. Three people, one weekend, and a concept inspired by *Worms* — you take turns, throw things, and try to freeze your enemies before they freeze you. I came in as lead programmer and built most of the codebase from scratch over that single weekend.
 
 After the jam wrapped, I liked the game enough to keep going.
 
@@ -15,7 +15,7 @@ After the jam wrapped, I liked the game enough to keep going.
 
 ## The Jam Build
 
-Game jams are a different kind of programming than anything else. There's no time to architect cleanly — you make decisions fast and live with them. My job was to get core systems working and integrated before the clock ran out.
+Game jams are a different kind of programming than anything else. There's no time to architect cleanly — you make decisions fast and live with them. My job was to get core systems working and integrated before the time limit ran out.
 
 I designed the player controller from scratch: movement, turn sequencing, input handling, and action validation all had to feel right immediately or the game wouldn't be worth playing. Alongside that I built the enemy AI, giving enemies the ability to track the player and navigate around level obstacles. The game state manager handled turn flow, win/loss detection, and score tracking. On top of all that, I coordinated with the team's artist and designer to integrate every visual and audio asset cleanly before submission — in a jam, broken asset pipelines kill projects.
 
