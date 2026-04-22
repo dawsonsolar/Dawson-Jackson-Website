@@ -1,10 +1,4 @@
-// Detect base path from Hugo-injected meta tag
-const SITE_BASE = (() => {
-  const meta = document.querySelector('meta[name="base-url"]');
-  if (!meta) return '/';
-  // Extract just the pathname (e.g. '/Dawson-Jackson-Website/')
-  try { return new URL(meta.content).pathname; } catch(e) { return '/'; }
-})();
+const SITE_BASE = window.__HUGO_BASE_PATH__ || '/';
 
 // LofiCode Main JavaScript
 

@@ -1,5 +1,11 @@
 <meta charset="UTF-8" />
-<meta name="base-url" content="{{ "/" | absURL }}" />
+<script>
+  (function() {
+    var base = {{ .Site.BaseURL | jsonify }};
+    try { window.__HUGO_BASE_PATH__ = new URL(base).pathname; }
+    catch(e) { window.__HUGO_BASE_PATH__ = '/'; }
+  })();
+</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>
