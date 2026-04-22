@@ -6,7 +6,7 @@ tags = ["Unity", "C#", "Game Dev"]
 image = "/Dawson-Jackson-Website/images/projects/hotc.png"
 +++
 
-*Heart of the Cards* was a 3-month Unity project built around an unusual concept: a deckbuilder where the cards are your personality, and the goal is to survive a date. The idea was strong. The execution ran into problems. The project was eventually cancelled before completion — but it taught me more than most projects that shipped.
+*Heart of the Cards* was a 4-month Unity project built around an unusual concept: a deckbuilder where the cards are your personality, and the goal is to survive a date. The idea was strong. The execution ran into problems. The project was eventually cancelled before completion — but it taught me more than most projects that shipped.
 
 ![Screenshot placeholder — add a gameplay screenshot here](/Dawson-Jackson-Website/images/projects/hotcscreenshot1.png)
 

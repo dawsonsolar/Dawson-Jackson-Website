@@ -1,28 +1,28 @@
 +++
 title = "Chyma and the Toll of Time"
+subtitle = "A senior capstone game shipping on Steam."
 date = 2025-12-21
 description = "A senior capstone game built with The Game Studio at Champlain College. Available free on Steam."
 tags = ["Unity", "C#", "Agile", "Game Dev"]
 image = "/Dawson-Jackson-Website/images/projects/chyma.png"
 +++
 
-**Chyma and the Toll of Time** is a game developed through Champlain College's senior capstone program in partnership with The Game Studio. I joined as a generalist programmer mid-development, integrating into an active production pipeline and contributing across multiple systems.
+*Chyma and the Toll of Time* is a game developed through Champlain College's senior capstone program in partnership with The Game Studio — a student-run development studio that ships real titles. I was added to the team mid-production as a generalist programmer, which meant getting up to speed on an unfamiliar codebase fast and finding ways to contribute without slowing anyone else down.
 
-## Role
+![Chyma and the Toll of Time gameplay](/Dawson-Jackson-Website/images/projects/chyma-screen1.png)
 
-**Generalist Programmer** — onboarded mid-project into an existing Unity/C# codebase.
+## My Role
 
-## What I Built
+Being brought on mid-project was a deliberate challenge I wanted to experience. In a professional setting, you rarely get to start from scratch — you inherit systems, conventions, and tech debt. On *Chyma*, I had to learn what existed before I could add anything new.
 
-- **Enemy behavior** — implemented and tuned AI state machines controlling enemy movement, patrol logic, and aggression triggers
-- **HUD & UI systems** — built in-game interface elements including health bars, status indicators, and screen-space overlays
-- **Community bug triage** — ran public playtesting rounds and systematically resolved player-reported issues through iterative builds
-- **Gameplay polish** — contributed fixes and tuning across physics interactions, scene transitions, and balance adjustments throughout the sprint cycle
+My contributions ended up spanning several areas. I implemented and tuned enemy AI, building out the state machines that governed how enemies patrolled, reacted to the player, and escalated aggression. I also worked on HUD and UI elements — health indicators, status displays, and screen-space overlays that fed real-time information to the player. Outside of feature work, I ran community-facing playtesting sessions and led the bug triage that followed, working through player-reported issues systematically across iterative builds.
 
-## Production Workflow
+![Chyma and the Toll of Time screenshot](/Dawson-Jackson-Website/images/projects/chyma-screen2.png)
 
-The project ran on a full Agile/Scrum pipeline — sprint planning, daily standups, backlog grooming, and retrospectives. Joining mid-production taught me how to read unfamiliar codebases quickly, communicate intent clearly in code reviews, and contribute without destabilizing existing systems.
+## Working in Agile
+
+The project ran on a full Agile/Scrum pipeline throughout — sprint planning, daily standups, backlog grooming, and retrospectives every cycle. It was my first extended experience with professional-style project management, and it changed how I think about sequencing work. Breaking contributions into sprint-sized pieces made it easier to communicate progress, catch blockers early, and avoid the kind of late-stage crunch that sank other projects I'd been on.
 
 ## Release
 
-Available now for **free on Steam**
+*Chyma and the Toll of Time* is available **free on Steam**.
